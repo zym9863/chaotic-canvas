@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>失控画板 (Chaotic Canvas)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <h1><i class="fas fa-paint-brush"></i> 失控画板</h1>
+            <div class="brush-options">
+                <button id="normal-brush" class="active"><i class="fas fa-palette"></i> 随机颜色画笔</button>
+                <button id="zigzag-brush"><i class="fas fa-bolt"></i> 曲折画笔</button>
+                <button id="splatter-brush"><i class="fas fa-spray-can"></i> 飞溅画笔</button>
+                <button id="ghost-brush"><i class="fas fa-ghost"></i> 幽灵画笔</button>
+            </div>
+            <div class="controls">
+                <button id="clear-canvas"><i class="fas fa-trash-alt"></i> 清空画布</button>
+                <div class="size-control">
+                    <label for="brush-size"><i class="fas fa-circle"></i> 画笔大小:</label>
+                    <input type="range" id="brush-size" min="1" max="50" value="10">
+                </div>
+                <div class="chaos-control">
+                    <label for="chaos-level"><i class="fas fa-random"></i> 混乱程度:</label>
+                    <input type="range" id="chaos-level" min="1" max="10" value="5">
+                </div>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+            <div class="brush-indicator">
+                <div class="indicator-item">
+                    <div class="indicator-label">当前画笔</div>
+                    <div class="indicator-value" id="brush-type-indicator"><i class="fas fa-palette"></i></div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-label">画笔大小</div>
+                    <div class="indicator-value" id="brush-size-indicator">10</div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-label">混乱程度</div>
+                    <div class="indicator-value" id="chaos-level-indicator">5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
